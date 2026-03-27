@@ -8,6 +8,15 @@
   <strong>零基础 → 理解原理 → 实战上手 → 写进简历 → 征服面试官</strong>
 </p>
 
+<!-- GitHub README 里真正能「动」的，主要是 GIF（以及部分浏览器里 SVG SMIL）。learn-claude-code 的炫酷交互来自它的 web 子项目 + 官网，不是纯 Markdown 魔法。 -->
+<p align="center">
+  <img src="assets/hero-openclaw-flow.gif" width="720" alt="OpenClaw 消息链路循环示意动画：用户消息 → Gateway → Agent Runner → ReAct 与工具调用"/>
+</p>
+<p align="center">
+  <sub>上图：本仓库用脚本生成的循环 GIF，在网页打开本仓库时会自动播放。</sub><br/>
+  <sub>另附 <a href="assets/hero-flow-animated.svg">hero-flow-animated.svg</a>（SMIL 路径动画，部分环境下可见）。</sub>
+</p>
+
 <p align="center">
   <a href="#课程导航">课程导航</a> •
   <a href="#为什么要学-openclaw">为什么学</a> •
@@ -22,6 +31,25 @@
   <img src="https://img.shields.io/badge/目标-面试通关-red?style=for-the-badge" alt="面试通关"/>
   <img src="https://img.shields.io/badge/OpenClaw-2026-orange?style=for-the-badge" alt="OpenClaw 2026"/>
 </p>
+
+---
+
+## 为什么不像 learn-claude-code 那样「整页会动」？
+
+[shareAI-lab/learn-claude-code](https://github.com/shareAI-lab/learn-claude-code) 的观感很大程度上来自：
+
+1. 仓库里的 **`web/`** 子项目（Next.js），本地 `npm run dev` 后是**交互式学习页**；
+2. 官网 **[learn.shareai.run](https://learn.shareai.run)** 上的可视化与动效。
+
+**GitHub 的 README 本身不支持** 在页面里跑 React、Canvas 动画或任意 JavaScript，所以纯仓库首页要做到「和官网一样炫」，常见做法是：
+
+| 做法 | 说明 |
+|------|------|
+| **README 里放 GIF / 短视频** | 兼容性最好，一点开仓库就能看到动效（本仓库已加）。 |
+| **放一张 SVG** | 可用 SMIL 做简单路径动画；GitHub 会过滤部分标签，效果因浏览器而异。 |
+| **GitHub Pages** | 单独部署静态站点，README 里放链接，体验最接近 learn-claude-code 的 web。 |
+
+若你希望做到同级别交互，下一步可以是：用 Vite/Next 做一个极简「课程路线图 + ReAct 流程」单页，挂到 `gh-pages` 分支并在 README 顶部放链接。
 
 ---
 

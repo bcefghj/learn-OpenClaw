@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 200" width="720" height="200" role="img" aria-label="OpenClaw message flow animation">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="100%" style="stop-color:#f7c59f"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="720" height="200" fill="#0d1117" rx="12"/>
+  <text x="360" y="36" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="18" font-weight="600" text-anchor="middle">OpenClaw: one message path (animated SVG)</text>
+
+  <rect x="40" y="70" width="120" height="44" rx="8" fill="none" stroke="#ff6b35" stroke-width="2"/>
+  <text x="100" y="97" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Channel</text>
+
+  <rect x="200" y="70" width="120" height="44" rx="8" fill="none" stroke="#ff6b35" stroke-width="2"/>
+  <text x="260" y="97" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="13" text-anchor="middle">Gateway</text>
+
+  <rect x="360" y="70" width="130" height="44" rx="8" fill="none" stroke="#ff6b35" stroke-width="2"/>
+  <text x="425" y="97" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">Agent Runner</text>
+
+  <rect x="530" y="70" width="150" height="44" rx="8" fill="none" stroke="#ff6b35" stroke-width="2"/>
+  <text x="605" y="97" fill="#e6edf3" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">LLM + Tools</text>
+
+  <path d="M160 92 L200 92" stroke="#30363d" stroke-width="3" fill="none"/>
+  <path d="M320 92 L360 92" stroke="#30363d" stroke-width="3" fill="none"/>
+  <path d="M490 92 L530 92" stroke="#30363d" stroke-width="3" fill="none"/>
+
+  <path id="track" d="M100 92 L260 92 L425 92 L605 92" fill="none" stroke="none"/>
+  <circle r="6" fill="url(#g)" filter="url(#glow)">
+    <animateMotion dur="3.5s" repeatCount="indefinite" rotate="auto">
+      <mpath xlink:href="#track"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="360" y="178" fill="#8b949e" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">GIF animates everywhere; SVG SMIL may animate in browser (GitHub strips some effects).</text>
+</svg>
