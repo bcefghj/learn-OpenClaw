@@ -10,6 +10,8 @@
 
 ---
 
+![漫画：MCP是通用翻译器](../comics/comic-07-mcp.png)
+
 ## 一、什么是 MCP（Model Context Protocol）
 
 MCP 是由 **Anthropic** 创建的**开放标准协议**，定义了 AI Agent 与外部工具/服务之间的通信规范。

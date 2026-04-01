@@ -2,10 +2,14 @@
   <img src="assets/logo.svg" width="120" alt="Learn OpenClaw Logo"/>
 </p>
 
-<h1 align="center">🦞 从零精通 OpenClaw —— 面试通关完全指南</h1>
+<h1 align="center">🦞 learn-OpenClaw —— 面试导向完全学习指南</h1>
 
 <p align="center">
   <strong>零基础 → 理解原理 → 实战上手 → 写进简历 → 征服面试官</strong>
+</p>
+
+<p align="center">
+  <img src="comics/comic-01-what-is-agent.png" width="600" alt="漫画：机器猫介绍AI Agent"/>
 </p>
 
 <!-- GitHub README 里真正能「动」的，主要是 GIF（以及部分浏览器里 SVG SMIL）。learn-claude-code 的炫酷交互来自它的 web 子项目 + 官网，不是纯 Markdown 魔法。 -->
@@ -26,10 +30,12 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/课程数-20节-blue?style=for-the-badge" alt="20节课"/>
-  <img src="https://img.shields.io/badge/难度-零基础友好-green?style=for-the-badge" alt="零基础"/>
-  <img src="https://img.shields.io/badge/目标-面试通关-red?style=for-the-badge" alt="面试通关"/>
-  <img src="https://img.shields.io/badge/OpenClaw-2026-orange?style=for-the-badge" alt="OpenClaw 2026"/>
+  <img src="https://img.shields.io/badge/课程-20节-blue?style=for-the-badge" alt="20节课"/>
+  <img src="https://img.shields.io/badge/八股文-110题-purple?style=for-the-badge" alt="110题八股文"/>
+  <img src="https://img.shields.io/badge/面试题-50题-red?style=for-the-badge" alt="50题面试"/>
+  <img src="https://img.shields.io/badge/STAR面试稿-10场景-green?style=for-the-badge" alt="STAR"/>
+  <img src="https://img.shields.io/badge/漫画插图-10张-orange?style=for-the-badge" alt="漫画"/>
+  <img src="https://img.shields.io/badge/零基础友好-2026-yellow?style=for-the-badge" alt="零基础"/>
 </p>
 
 ---
@@ -173,10 +179,23 @@
 
 > 面试是本课程的终极目标，这里是精华中的精华
 
-- [面试题库：50 道高频题 + 详细解析](interview/questions.md)
-- [简历模板：OpenClaw 项目经验怎么写](interview/resume-template.md)
-- [面试话术：如何介绍 OpenClaw 项目](interview/project-introduction.md)
-- [面试官视角：他们到底想考什么？](interview/interviewer-perspective.md)
+### 核心面试材料
+
+| 材料 | 说明 | 适合阶段 |
+|------|------|---------|
+| [八股文大全（110+ 题）](interview/baguweng.md) | 分 9 大类的面试题 + 详细答案，约 4.8 万字 | 面试前重点刷 |
+| [面试题库（50 题）](interview/questions.md) | 入门→中级→高级分层，每题附得分点 | 系统复习 |
+| [STAR 面试稿（10 场景）](interview/star-interview-scripts.md) | 完整口述稿 + 追问应对 | 面试前练习 |
+
+### 简历与求职
+
+| 材料 | 说明 |
+|------|------|
+| [简历模板：3 种方向](interview/resume-template.md) | 部署运维 / Agent开发 / 源码贡献 |
+| [小白简历撰写教程](interview/resume-writing-guide.md) | 从零写简历，含完整范例 |
+| [项目介绍话术](interview/project-introduction.md) | 30秒/1分钟/3分钟版本 |
+| [面试官视角](interview/interviewer-perspective.md) | 他们到底想考什么？ |
+| [2026 岗位市场分析](interview/job-market-2026.md) | 薪资、岗位、行业分布 |
 
 ---
 
@@ -184,7 +203,7 @@
 
 ```bash
 # 1. 克隆本仓库
-git clone https://github.com/bcefghj/learn-openclaw-for-interview.git
+git clone https://github.com/bcefghj/learn-OpenClaw.git
 
 # 2. 按照课程顺序学习
 # 从 lessons/01-what-is-ai-agent.md 开始
@@ -194,6 +213,13 @@ git clone https://github.com/bcefghj/learn-openclaw-for-interview.git
 
 # 4. 面试前重点复习面试专区
 # interview/ 目录下的内容
+
+# 5. 生成 HTML 版本（可选）
+python3 scripts/build-html.py
+# 打开 docs/index.html 即可阅读
+
+# 6. 生成 PDF 版本（需安装 pandoc）
+python3 scripts/build-pdf.py
 ```
 
 ---
@@ -233,9 +259,60 @@ git clone https://github.com/bcefghj/learn-openclaw-for-interview.git
 
 ---
 
+## 漫画插图
+
+本仓库包含 10 张可爱风格漫画插图，穿插在课程中帮助理解核心概念：
+
+<p align="center">
+  <img src="comics/comic-02-react-loop.png" width="400" alt="ReAct循环"/>
+  <img src="comics/comic-03-gateway.png" width="400" alt="Gateway"/>
+</p>
+<p align="center">
+  <img src="comics/comic-05-skills.png" width="400" alt="Skills"/>
+  <img src="comics/comic-10-celebrate.png" width="400" alt="毕业"/>
+</p>
+
+[查看全部漫画 →](comics/README.md)
+
+---
+
+## 多格式导出
+
+| 格式 | 说明 | 命令 |
+|------|------|------|
+| Markdown | 直接在 GitHub 阅读 | - |
+| HTML | 美观的单页网站 | `python3 scripts/build-html.py` |
+| PDF | 打印友好版本 | `python3 scripts/build-pdf.py` |
+
+---
+
+## 项目结构
+
+```
+learn-OpenClaw/
+├── lessons/          # 20节课程（每节 2000-5000 字）
+├── interview/        # 面试材料（八股文、STAR面试稿、简历模板等）
+├── comics/           # 10张漫画插图
+├── practice/         # 实践项目指南
+├── scripts/          # PDF/HTML 导出脚本
+├── docs/             # 导出的 HTML/PDF
+├── references/       # 学习资源汇总
+└── assets/           # 静态资源
+```
+
+---
+
+## 更多资源
+
+- [学习资源汇总](references/learning-resources.md)
+- [面试资源导航](references/interview-resources.md)
+- [实践项目指南](practice/README.md)
+
+---
+
 ## 贡献
 
-欢迎提交 Issue 和 PR！如果觉得有帮助，请给个 Star ⭐
+欢迎提交 Issue 和 PR！如果觉得有帮助，请给个 Star
 
 ## License
 
@@ -244,5 +321,8 @@ MIT License
 ---
 
 <p align="center">
-  <sub>Made with ❤️ for every job seeker in 2026</sub>
+  <img src="comics/comic-10-celebrate.png" width="500" alt="恭喜你从小白到面试达人"/>
+</p>
+<p align="center">
+  <sub>Made with care for every job seeker in 2026</sub>
 </p>

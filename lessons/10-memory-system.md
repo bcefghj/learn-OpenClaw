@@ -4,6 +4,8 @@
 
 ---
 
+![漫画：Memory就像AI的日记本](../comics/comic-04-memory.png)
+
 ## 本课目标
 
 学完这节课，你能回答：

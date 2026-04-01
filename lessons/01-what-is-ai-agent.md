@@ -15,6 +15,8 @@
 
 ---
 
+![漫画：机器猫介绍什么是AI Agent](../comics/comic-01-what-is-agent.png)
+
 ## 一、什么是 AI（人工智能）？
 
 ### 1.1 最通俗的比喻

@@ -18,6 +18,8 @@
 
 ---
 
+![漫画：Gateway就像机场塔台](../comics/comic-03-gateway.png)
+
 ## 1. 什么是 Gateway？
 
 ### 用"调度中心"来理解

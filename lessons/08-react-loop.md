@@ -4,6 +4,8 @@
 
 ---
 
+![漫画：ReAct循环就像做菜](../comics/comic-02-react-loop.png)
+
 ## 本课目标
 
 学完这节课，你能回答：
